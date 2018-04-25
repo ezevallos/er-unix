@@ -118,8 +118,9 @@ Algunas opciones:
 Algunos flags:
 *	g: aplica los cambios globalmente (por defecto, sólo se cambia la primera aparición en cada línea)
 *	p imprime las líneas afectadas, incluso con la opción -n.
-*	NUMERO: reemplaza la aparición número NUMERO
-*	w fichero: escribe las líneas con sustituciones al fichero indicado
+*	NUMERO: reemplaza la aparición número NUMERO.
+*	w fichero: escribe las líneas con sustituciones al fichero indicado.
+
 Ejemplos:
 *	Cambia, en el fichero amigos, todas las apariciones de pepe y paco por Pepe y Paco, respectivamente:
 ```bash
