@@ -79,7 +79,6 @@ $ # Lista cualquier carácter que no sea ni letra ni número de un archivo.
 $ grep '[^a-zA-Z0-9]' search-file.txt
 $ # Buscar teléfonos del tipo 999-9999 de un fichero concreto.
 $ grep '[0-9]\{3\}-[0-9]\{4\}' search-file.txt
-
 $ # Buscar líneas de un fichero con solamente 1 carácter:
 $ grep '^.$' search-file.txt
 $ # Buscar líneas que comienzan con el carácter "."
@@ -107,5 +106,72 @@ Formato (para substituciones):
 ```bash
 sed [opciones] 's/REGEXP/reemplazo/flag' [fichero]
 ```
+Algunos comandos:
+*	s substitución
+*	d borrado
+*	i\, a\, añade antes/después de la línea afectada
+*	c\ reemplaza la línea afectada
+Algunas opciones:
+*	-e comando: añade comando
+*	-i edita el fichero in-place
+*	-n suprime la salida
+Algunos flags:
+*	g: aplica los cambios globalmente (por defecto, sólo se cambia la primera aparición en cada línea)
+*	p imprime las líneas afectadas, incluso con la opción -n.
+*	NUMERO: reemplaza la aparición número NUMERO
+*	w fichero: escribe las líneas con sustituciones al fichero indicado
+Ejemplos:
+*	Cambia, en el fichero amigos, todas las apariciones de pepe y paco por Pepe y Paco, respectivamente:
+```bash
+$ sed -e 's/pepe/Pepe/g' -e 's/paco/Paco/g' amigos
+```
+también...
+```bash
+sed 's/pepe/Pepe/g ; s/paco/Paco/g' amigos
+```
+*	Cambia pepe por Pepe, pero sólo en las líneas que tengan Potamo
+```bash
+$ sed '/Potamo/s/pepe/Pepe/g' amigos
+```
+*	Muestra sólo las líneas que contengan jaime
+```bash
+$ sed -n '/jaime/p' amigos
+```
+•	Borra las líneas que contengan jaime
+```bash
+$ sed '/jaime/d' amigos
+```
+•	Cambia las líneas que contengan jaime por otra cosa
+```bash
+$ sed '/jaime/c\BORRADO' amigos
+```
+•	Inserta una línea, con la palabra 'APARICION', antes de las líneas que contengan jaime
+```bash
+$ sed '/jaime/i\APARICION' amigos
+```
+•	Reemplaza, en cada línea de fichero, la quinta ocurrencia de stop por STOP
+```bash
+$ sed 's/stop/STOP/5' fichero
+```
+•	Igual que antes, pero guarda cada línea reemplazada en el fichero f2
+```bash
+$ sed 's/stop/STOP/5w f2' fichero
+```
+####Indicación de líneas:
+Podemos especificar las líneas del fichero en las que queremos que se realicen las operaciones:
+```bash
+sed '3s/stop/STOP/g' #reemplaza sólo en la línea 3
+sed '3,10s/stop/STOP/g' #reemplaza de la línea 3 a la 10
+sed '3,$s/stop/STOP/g' #reemplaza de la línea 3 al final 
+sed '!3s/stop/STOP/g' #reemplaza en todas las líneas menos la 3
+```
 
-
+###NOTA:
+####Operador &:
+Se sustituye el patrón reconocido.
+Ejemplo: Reemplazar stop por <stop>
+ ```bash
+ $ sed '3s/stop/<&>/g' fichero
+ ```
+ ####Operador . :
+ Indica la existencia de un caracter en su ubicación.
