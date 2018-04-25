@@ -48,6 +48,7 @@ Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
 | [:punct:] | [][!”#$%&’()*+,./:;<=>?@\^_`{\|}~-] | Caracteres de puntuación  |
 
 Además de expresiones complementarias que nos ayudarán mucho en lo que necesitemos:
+
 |     |                                                                                                       |
 |-----|:-----------------------------------------------------------------------------------------------------:|
 | (^) | La expresión encaja o coincide al principio de la línea, por ejemplo ^A |
