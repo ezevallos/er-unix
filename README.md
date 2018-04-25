@@ -181,6 +181,6 @@ Indica la existencia de un caracter en su ubicación.
 Observemos el siguiente *bourne again shell*:
 ```bash
 #!/bin/bash
-ls -l --full-time `/var/backup/scripts/xml_parser.sh $NAME files1` | grep $DATE_YMD_YESTERDAY | awk '{print \$9}' | sed 's/$/*/' | sed 's/^/`/var/backup/scripts/xml_parser.sh $NAME files2`/' | tr '\\n' ' '
+ls -l --full-time `/var/backup/scripts/xml_parser.sh $NAME files1` | grep $DATE_YMD_YESTERDAY | awk '{print \$9}' | sed 's/$/*/' | sed 's/^/`/var/backup/scripts/xml_parser.sh $NAME files2`/' | tr '\\n'
 
 ```
