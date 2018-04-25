@@ -54,7 +54,7 @@ Además de expresiones complementarias que nos ayudarán mucho en lo que necesit
 | (^) | La expresión encaja o coincide al principio de la línea, por ejemplo ^A |
 | (?) | La expresión encaja o coincide al final de la línea, por ejemplo A? |
 | (\) | Escapa el carácter siguiente a la contrabarra, haciendo que deje de ser un carácter especial, ejemplo en \* |
-| ([])  | La expresión encaja o coincide con alguno de los caracteres incluidos entre los corchetes, también se pueden especificar rangos, por ejemplo \[aeiou\] o \[0-9\].  |
+| (\[\])  | La expresión encaja o coincide con alguno de los caracteres incluidos entre los corchetes, también se pueden especificar rangos, por ejemplo \[aeiou\] o \[0-9\].  |
 | \[^ \]  | La expresión encaja o coincide con cualquier carácter excepto los que se encuentran entre corchetes, ejemplo, todos los carácteres excepto del 0 al 9: \[^0-9\] |
 | (.) | La expresión encaja respecto a un único carácter, de cualquier valor, excepto al final de la línea. |
 | (*) | La expresión coincide con 0 o más carácteres de la expresión que le precede.  |
