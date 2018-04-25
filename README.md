@@ -1,5 +1,6 @@
 # er-unix
 Uso de Expresiones Regulares en Unix.
+##### Ángel Huiza & Enrique Zevallos
 
 ## Expresiones Regulares
 Utilizamos las expresiones regulares para denotar lenguajes regulares. Una expresión es regular cuando:
