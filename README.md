@@ -70,4 +70,16 @@ Grep o Global Regular Expression print, es una utilidad de la línea de comando 
 cd /usr/share/common-licenses
 grep "GNU" GPL-3
 ```
+El primer argumento, "GNU", es el patrón que deseamos buscar, mientras que el segundo argumento, "GPL-3", es el fichero de entrada que deseamos buscar. Esto tendrá como resultado, todas y cada una de las líneas que contienen dicho patrón en el texto. Algo como: 
+
+GNU GENERAL PUBLIC LICENSE
+  The GNU General Public License is a free, copyleft license for
+the GNU General Public License is intended to guarantee your freedom to
+GNU General Public License for most of our software; it applies also to
+  Developers that use the GNU GPL protect your rights with two steps:
+  "This License" refers to version 3 of the GNU General Public License.
+  13. Use with the GNU Affero General Public License.
+under version 3 of the GNU Affero General Public License into a single
+...
+...
 
