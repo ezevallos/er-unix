@@ -3,7 +3,7 @@ Uso de Expresiones Regulares en Unix.
 
 ## Expresiones Regulares
 Utilizamos las expresiones regulares para denotar lenguajes regulares. Una expresión es regular cuando:
-- <p> &Phi </p> es una expresión regular para el lenguaje regular $\Phi$.
+- <p> &Phi; </p> es una expresión regular para el lenguaje regular $\Phi$.
 - $\(\epsilon\)$ es una expresión regular para el lenguaje regular {$\(\epsilon\)$}
 - Si a 
 
