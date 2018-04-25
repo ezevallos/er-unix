@@ -47,7 +47,7 @@ Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
 | [:upper:] | [A-Z] | Letras mayúsculas |
 | [:punct:] | [][!”#$%&’()*+,./:;<=>?@\^_`{\|}~-] | Caracteres de puntuación  |
 
-####Cuantificadores:
+#### Cuantificadores:
 Además de indicar qué caracteres queremos permitir podemos seleccionar cuantas veces deben aparecer. Si no añadimos nada que indique lo contrario se asume que el carácter debe aparecer una vez, pero podríamos pedir que el carácter aparezca un número distinto de veces:
 
   *	”?”, el carácter aparece ninguna o una vez.
@@ -57,7 +57,7 @@ Además de indicar qué caracteres queremos permitir podemos seleccionar cuantas
   *	“{4}”, cuatro veces.
   *	“{4,10}”, entre 4 y 10 veces
 
-####Puntos de anclaje:
+#### Puntos de anclaje:
 Además de poder indicar qué y cuántas veces queremos que algo aparezca podemos indicar dónde deseamos que lo haga. Los puntos de anclaje más utilizados son:
 
   *	”^”, inicio de línea
@@ -66,7 +66,7 @@ Además de poder indicar qué y cuántas veces queremos que algo aparezca podemo
   *	”>”, fin de palabra
   *	“\b”, límite de palabra
 
-####Nota:
+#### Nota:
 Algunos caracteres tienen significados especiales, como ., $, (, ), [, ], \ o ^ y si se quieren utilizar hay que escaparlos precediéndolos con \.
 
 Ejemplos:
