@@ -4,7 +4,7 @@ Uso de Expresiones Regulares en Unix.
 ## Expresiones Regulares
 Utilizamos las expresiones regulares para denotar lenguajes regulares. Una expresión es regular cuando:
 - <em> &Phi; </em> es una expresión regular para el lenguaje regular <em> &Phi; </em>.
-- <em> &epsilon; </em> es una expresión regular para el lenguaje regular <em> &epsilon; </em>.
+- <em> &epsilon; </em> es una expresión regular para el lenguaje regular { <em> &epsilon; </em> }.
 - Si a <em> &straightepsilon; </em> <em> &Sigma; </em> (donde Sigma es el alfabeto), a es una expresión regular con lenguaje {a}.
 - Si a y b son expresiones regulares, entonces a + b también lo será, cuyo lenguaje ha de ser {a,b}.
 - Si a y b son expresiones regulares, entonces ab (es decir la concatenación) también será regular.
