@@ -19,7 +19,10 @@ Es así que tenemos:
 
 
 ### Gramática Regular
-Una gramática es regular cuando tiene un conjunto de reglas de la forma A -> a, o A -> aB o A -> <em> &epsilon </em>, donde épsilon es el caracter especial llamado NULL.
+Una gramática es regular cuando tiene un conjunto de reglas de la forma A -> a, o A -> aB o A -> <em> &epsilon; </em>, donde épsilon es el caracter especial llamado NULL.
+
+### Lenguaje Regular
+Un lenguaje será regular, si puede ser expresado en términos de su expresión regular.
 
 ### Expresiones Regulares en UNIX
 
