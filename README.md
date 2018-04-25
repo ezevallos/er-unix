@@ -3,9 +3,9 @@ Uso de Expresiones Regulares en Unix.
 
 ## Expresiones Regulares
 Utilizamos las expresiones regulares para denotar lenguajes regulares. Una expresión es regular cuando:
-. \Phi es una expresión regular para el lenguaje regular \Phi.
-. \(\epsilon\) es una expresión regular para el lenguaje regular { \(\epsilon\) }
-. Si a 
+- \Phi es una expresión regular para el lenguaje regular \Phi.
+- \(\epsilon\) es una expresión regular para el lenguaje regular { \(\epsilon\) }
+- Si a 
 
 Las expresiones regulares son un medio para describir patrones de texto. Imaginemos que no sólo queremos buscar en un texto todas las líneas que contienen una palabra, como por ejemplo COMPUTACION, sino que sólo nos interesan las líneas que empiezan por la palabra COMPUTACION, pero no las que contengan la palabra en cualquier otra posición. Describir el patrón “COMPUTACION” es trivial, tan sólo hay que escribir “COMPUTACION”.
 
