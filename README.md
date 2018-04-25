@@ -73,5 +73,5 @@ grep "GNU" GPL-3
 El primer argumento, "GNU", es el patrón que deseamos buscar, mientras que el segundo argumento, "GPL-3", es el fichero de entrada que deseamos buscar. Esto tendrá como resultado, todas y cada una de las líneas que contienen dicho patrón en el texto.
 
 ##### Opciones
-Asimismo, podemos hacer uso de flags o banderas que nos permiten acceder a una amplia gama de opciones. Podemos utilizar **-v**  o **--invert-match** para hacer una búsqueda invertida que deje afuera a la expresión especificada. También está la bandera ** -i ** o **--ignore-case** que nos permite ignorar si se trata de caracteres en mayúscula o minúscula, durante la búsqueda.
+Asimismo, podemos hacer uso de flags o banderas que nos permiten acceder a una amplia gama de opciones. Podemos utilizar **-v**  o **--invert-match** para hacer una búsqueda invertida que deje afuera a la expresión especificada. También está la bandera **-i** o **--ignore-case** que nos permite ignorar si se trata de caracteres en mayúscula o minúscula, durante la búsqueda y devolver el resultado independientemente de ello.
 
