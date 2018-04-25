@@ -22,6 +22,7 @@ Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
 
 
 | POSIX | ASCII | Significado |
+| ------------- |:-------------:| -----:|
 | [:alnum:] | [A-Za-z0-9] | Caracteres alfanuméricos (letras y números) |
 | [:word:]  | [A-Za-z0-9_]  | Caracteres alfanuméricos y “_”  |
 | [:alpha:] | [A-Za-z]  | Caracteres alfabéticos  |
