@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -l --full-time `/var/backup/scripts/xml_parser.sh $NAME files1` | grep $DATE_YMD_YESTERDAY | awk '{print \$9}' | sed 's/$/*/' | sed 's/^/`/var/backup/scripts/xml_parser.sh $NAME files2`/' | tr '\\n' ' ' >> $SCRIPT
