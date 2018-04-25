@@ -34,7 +34,8 @@ Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
 | [:punct:] | [][!”#$%&’()*+,./:;<=>?@\^_`{\|}~-] | Caracteres de puntuación  |
 
 Además de expresiones complementarias que nos ayudarán mucho en lo que necesitemos:
-| ------------- |:-------------:| -----:|
+
+| ------------- |:-------------:|
 | (^) | La expresión encaja o coincide al principio de la línea, por ejemplo ^A |
 | (?) | La expresión encaja o coincide al final de la línea, por ejemplo A? |
 | (\) | Escapa el carácter siguiente a la contrabarra, haciendo que deje de ser un carácter especial, ejemplo in \* |
@@ -45,6 +46,7 @@ Además de expresiones complementarias que nos ayudarán mucho en lo que necesit
 | \{x,y\} | La expresión encaja o coincide desde X hasta Y respecto a lo que la ocurrencia que le precede.  |
 | \{x\} | La expresión encaja exactamente X ocurrencias de lo que le precede. |
 | \{x,\}  | La expresión encaja exactamente X o más ocurrencias de lo que le precede. |
+
 
 
 
