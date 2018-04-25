@@ -47,20 +47,46 @@ Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
 | [:upper:] | [A-Z] | Letras mayúsculas |
 | [:punct:] | [][!”#$%&’()*+,./:;<=>?@\^_`{\|}~-] | Caracteres de puntuación  |
 
-Además de expresiones complementarias que nos ayudarán mucho en lo que necesitemos:
+####Cuantificadores:
+Además de indicar qué caracteres queremos permitir podemos seleccionar cuantas veces deben aparecer. Si no añadimos nada que indique lo contrario se asume que el carácter debe aparecer una vez, pero podríamos pedir que el carácter aparezca un número distinto de veces:
 
-|     |                                                                                                       |
-|-----|:-----------------------------------------------------------------------------------------------------:|
-| (^) | La expresión encaja o coincide al principio de la línea, por ejemplo ^A |
-| (?) | La expresión encaja o coincide al final de la línea, por ejemplo A? |
-| (\) | Escapa el carácter siguiente a la contrabarra, haciendo que deje de ser un carácter especial, ejemplo en \* |
-| (\[\])  | La expresión encaja o coincide con alguno de los caracteres incluidos entre los corchetes, también se pueden especificar rangos, por ejemplo \[aeiou\] o \[0-9\].  |
-| \[^ \]  | La expresión encaja o coincide con cualquier carácter excepto los que se encuentran entre corchetes, ejemplo, todos los carácteres excepto del 0 al 9: \[^0-9\] |
-| (.) | La expresión encaja respecto a un único carácter, de cualquier valor, excepto al final de la línea. |
-| (*) | La expresión coincide con 0 o más carácteres de la expresión que le precede.  |
-| \{x,y\} | La expresión encaja o coincide desde X hasta Y respecto a lo que la ocurrencia que le precede.  |
-| \{x\} | La expresión encaja exactamente X ocurrencias de lo que le precede. |
-| \{x,\}  | La expresión encaja exactamente X o más ocurrencias de lo que le precede. |
+  *	”?”, el carácter aparece ninguna o una vez.
+    Por ejemplo: “usher1?” coincidiría con “usher” o “usher1”.
+  *	”*”, cero, una o varias veces.
+  *	”+”, al menos una vez.
+  *	“{4}”, cuatro veces.
+  *	“{4,10}”, entre 4 y 10 veces
+
+####Puntos de anclaje:
+Además de poder indicar qué y cuántas veces queremos que algo aparezca podemos indicar dónde deseamos que lo haga. Los puntos de anclaje más utilizados son:
+
+  *	”^”, inicio de línea
+  *	”$”, fin de línea
+  *	”<”, principio de palabra
+  *	”>”, fin de palabra
+  *	“\b”, límite de palabra
+
+####Nota:
+Algunos caracteres tienen significados especiales, como ., $, (, ), [, ], \ o ^ y si se quieren utilizar hay que escaparlos precediéndolos con \.
+
+Ejemplos:
+```bash
+$ # Listar todas las líneas que comienzan por "From:" de nuestros emails:
+$ grep '^From: ' /usr/mail/$USER
+$ # Buscar líneas con al menos una letra desde la “a” hasta la “z” (incluidas mayúsculas) de un fichero concreto.
+$ grep '[a-zA-Z]' search-file.txt
+$ # Lista cualquier carácter que no sea ni letra ni número de un archivo.
+$ grep '[^a-zA-Z0-9]' search-file.txt
+$ # Buscar teléfonos del tipo 999-9999 de un fichero concreto.
+$ grep '[0-9]\{3\}-[0-9]\{4\}' search-file.txt
+
+$ # Buscar líneas de un fichero con solamente 1 carácter:
+$ grep '^.$' search-file.txt
+$ # Buscar líneas que comienzan con el carácter "."
+$ grep '^\.' search-file.txt
+$ # Buscar líneas que comienzan por un "." y dos letras en minúscula:
+$ grep '^\.[a-z][a-z]' search-file.txt
+```
 
 ### Aplicaciones en UNIX
 #### Grep
@@ -74,4 +100,12 @@ El primer argumento, "GNU", es el patrón que deseamos buscar, mientras que el s
 
 ##### Opciones
 Asimismo, podemos hacer uso de flags o banderas que nos permiten acceder a una amplia gama de opciones. Podemos utilizar **-v**  o **--invert-match** para hacer una búsqueda invertida que deje afuera a la expresión especificada. También está la bandera **-i** o **--ignore-case** que nos permite ignorar si se trata de caracteres en mayúscula o minúscula, durante la búsqueda y devolver el resultado independientemente de ello.
+
+#### Sed
+Editor de flujo; permite realizar transformaciones básicas de un flujo de entrada (un fichero o una entrada desde una tubería) 
+Formato (para substituciones):
+```bash
+sed [opciones] 's/REGEXP/reemplazo/flag' [fichero]
+```
+
 
