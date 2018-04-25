@@ -19,7 +19,8 @@ Las expresiones regulares se evalúan carácter a carácter. Las más básicas s
 Las expresiones regulares permiten describir este tipo de patrones de texto y muchos más por lo que nos serán de una gran utilidad. Además, en Unix las expresiones regulares tienen un amplio soporte, tanto en las herramientas de procesamiento de ficheros de texto (grep), o en los editores de texto (vi, emacs) como en los lenguajes de programación (Perl, Python). El único inconveniente de las expresiones regulares es que su sintaxis no es trivial y que además varía ligeramente entre distintas herramientas.
 
 Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
-\hline
+
+
 | POSIX | ASCII | Significado |
 | [:alnum:] | [A-Za-z0-9] | Caracteres alfanuméricos (letras y números) |
 | [:word:]  | [A-Za-z0-9_]  | Caracteres alfanuméricos y “_”  |
