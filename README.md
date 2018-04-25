@@ -49,7 +49,6 @@ Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
 
 Además de expresiones complementarias que nos ayudarán mucho en lo que necesitemos:
 
-|     |                                                                                      |
 |-----|:------------------------------------------------------------------------------------:|
 | (^) | La expresión encaja o coincide al principio de la línea, por ejemplo ^A |
 | (?) | La expresión encaja o coincide al final de la línea, por ejemplo A? |
