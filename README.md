@@ -137,27 +137,27 @@ $ sed '/Potamo/s/pepe/Pepe/g' amigos
 ```bash
 $ sed -n '/jaime/p' amigos
 ```
-•	Borra las líneas que contengan jaime
+*	Borra las líneas que contengan jaime
 ```bash
 $ sed '/jaime/d' amigos
 ```
-•	Cambia las líneas que contengan jaime por otra cosa
+*	Cambia las líneas que contengan jaime por otra cosa
 ```bash
 $ sed '/jaime/c\BORRADO' amigos
 ```
-•	Inserta una línea, con la palabra 'APARICION', antes de las líneas que contengan jaime
+*	Inserta una línea, con la palabra 'APARICION', antes de las líneas que contengan jaime
 ```bash
 $ sed '/jaime/i\APARICION' amigos
 ```
-•	Reemplaza, en cada línea de fichero, la quinta ocurrencia de stop por STOP
+*	Reemplaza, en cada línea de fichero, la quinta ocurrencia de stop por STOP
 ```bash
 $ sed 's/stop/STOP/5' fichero
 ```
-•	Igual que antes, pero guarda cada línea reemplazada en el fichero f2
+*	Igual que antes, pero guarda cada línea reemplazada en el fichero f2
 ```bash
 $ sed 's/stop/STOP/5w f2' fichero
 ```
-####Indicación de líneas:
+#### Indicación de líneas:
 Podemos especificar las líneas del fichero en las que queremos que se realicen las operaciones:
 ```bash
 sed '3s/stop/STOP/g' #reemplaza sólo en la línea 3
@@ -166,12 +166,12 @@ sed '3,$s/stop/STOP/g' #reemplaza de la línea 3 al final
 sed '!3s/stop/STOP/g' #reemplaza en todas las líneas menos la 3
 ```
 
-###NOTA:
-####Operador &:
+### NOTA:
+#### Operador &:
 Se sustituye el patrón reconocido.
 Ejemplo: Reemplazar stop por <stop>
  ```bash
  $ sed '3s/stop/<&>/g' fichero
  ```
- ####Operador . :
- Indica la existencia de un caracter en su ubicación.
+#### Operador . :
+Indica la existencia de un caracter en su ubicación.
