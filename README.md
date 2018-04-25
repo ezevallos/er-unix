@@ -10,6 +10,17 @@ Utilizamos las expresiones regulares para denotar lenguajes regulares. Una expre
 - Si a y b son expresiones regulares, entonces ab (es decir la concatenación) también será regular.
 - Si a es una expresión regular, luego a\* (0 o más veces a) también lo será.
 
+Es así que tenemos:
+
+|                          | Expresion Regular| Lenguaje Regular  |
+| ------------------------ |:----------------:| -----------------:|
+| conjunto de vocales      | aueieiaoieoieieiu|    {a,e,i,o,u}    |
+| b, de ahí 0 o más c      |      (b.c*)      |{b,bc,bcc,bccc... }|
+
+
+### Gramática Regular
+Una gramática es regular cuando tiene un conjunto de reglas de la forma A -> a, o A -> aB o A -> <em> &epsilon </em>, donde épsilon es el caracter especial llamado NULL.
+
 ### Expresiones Regulares en UNIX
 
 Las expresiones regulares son un medio para describir patrones de texto. Imaginemos que no sólo queremos buscar en un texto todas las líneas que contienen una palabra, como por ejemplo COMPUTACION, sino que sólo nos interesan las líneas que empiezan por la palabra COMPUTACION, pero no las que contengan la palabra en cualquier otra posición. Describir el patrón “COMPUTACION” es trivial, tan sólo hay que escribir “COMPUTACION”.
