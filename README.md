@@ -7,6 +7,8 @@ Utilizamos las expresiones regulares para denotar lenguajes regulares. Una expre
 - $\(\epsilon\)$ es una expresión regular para el lenguaje regular {$\(\epsilon\)$}
 - Si a 
 
+### Expresiones Regulares en UNIX
+
 Las expresiones regulares son un medio para describir patrones de texto. Imaginemos que no sólo queremos buscar en un texto todas las líneas que contienen una palabra, como por ejemplo COMPUTACION, sino que sólo nos interesan las líneas que empiezan por la palabra COMPUTACION, pero no las que contengan la palabra en cualquier otra posición. Describir el patrón “COMPUTACION” es trivial, tan sólo hay que escribir “COMPUTACION”.
 
 Las expresiones regulares se evalúan carácter a carácter. Las más básicas son simplemente una lista de letras que forman un texto que debe coincidir exactamente con lo que buscamos. Por ejemplo, con la expresión “HUMAN” sólo coincidirá “HUMAN”. Pero por fortuna las expresiones regulares nos permiten hacer búsquedas y substituciones mucho más complejas.
