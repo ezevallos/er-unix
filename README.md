@@ -30,7 +30,7 @@ Las expresiones regulares son un medio para describir patrones de texto. Imagine
 
 Las expresiones regulares se evalúan carácter a carácter. Las más básicas son simplemente una lista de letras que forman un texto que debe coincidir exactamente con lo que buscamos. Por ejemplo, con la expresión “HUMAN” sólo coincidirá “HUMAN”. Pero por fortuna las expresiones regulares nos permiten hacer búsquedas y substituciones mucho más complejas.
 
-Las expresiones regulares permiten describir este tipo de patrones de texto y muchos más por lo que nos serán de una gran utilidad. Además, en Unix las expresiones regulares tienen un amplio soporte, tanto en las herramientas de procesamiento de ficheros de texto (grep), o en los editores de texto (vi, emacs) como en los lenguajes de programación (Perl, Python). El único inconveniente de las expresiones regulares es que su sintaxis no es trivial y que además varía ligeramente entre distintas herramientas.
+Las expresiones regulares permiten describir este tipo de patrones de texto y muchos más por lo que nos serán de una gran utilidad. Además, en Unix las expresiones regulares tienen un amplio soporte, tanto en las herramientas de procesamiento de ficheros de texto (grep), como en los editores de texto (vi, emacs) como en los lenguajes de programación (Perl, Python). El único inconveniente de las expresiones regulares es que su sintaxis no es trivial y que además varía ligeramente entre distintas herramientas.
 
 Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
 
@@ -49,6 +49,8 @@ Existen rangos y tipos de caracteres predefinidos que podemos utilizar como:
 
 Además de expresiones complementarias que nos ayudarán mucho en lo que necesitemos:
 
+|     |                                                                                      |
+|-----|:------------------------------------------------------------------------------------:|
 | (^) | La expresión encaja o coincide al principio de la línea, por ejemplo ^A |
 | (?) | La expresión encaja o coincide al final de la línea, por ejemplo A? |
 | (\) | Escapa el carácter siguiente a la contrabarra, haciendo que deje de ser un carácter especial, ejemplo en \* |
