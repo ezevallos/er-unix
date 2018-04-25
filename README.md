@@ -65,7 +65,9 @@ Además de expresiones complementarias que nos ayudarán mucho en lo que necesit
 ### Aplicaciones en UNIX
 #### Grep
 Grep o Global Regular Expression print, es una utilidad de la línea de comando que nos permite realizar búsquedas en _data sets_ de archivos de texto; línea a línea, y compararlas con una expresión regular. Es una de las más útiles y versátiles que nos trae la línea de comandos de Linux, y es extremadamente poderoso si es utilizado de manera apropiada.
+
 ´´´bash
 cd /usr/share/common-licenses
 grep "GNU" GPL-3
-´´´bash
+´´´
+
